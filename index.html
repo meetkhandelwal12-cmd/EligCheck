@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>EligCheck – Indian Government Exam Eligibility</title>
+
+  <meta name="description" content="EligCheck helps you check eligibility for Indian government exams like UPSC, SSC, Banking, Defence and Railways based on age, education and category.">
+
+  <!-- FAVICON (Browser tab logo) -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <!-- LOGO ON RIGHT SIDE -->
+  <div class="header-logo">
+    <img src="logo.png" alt="EligCheck Logo">
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- TITLE -->
+  <h1>EligCheck</h1>
+  <p>Check your eligibility for Indian government exams</p>
+</header>
+
+<main id="home">
+
+  <!-- ELIGIBILITY CHECK FORM -->
+  <section>
+    <h2>Check Exam Eligibility</h2>
+
+    <label for="age">Your Age</label>
+    <input type="number" id="age" placeholder="Enter your age">
+
+    <label for="education">Your Education</label>
+    <select id="education">
+      <option value="">Select</option>
+      <option value="10">10th Pass</option>
+      <option value="12">12th Pass</option>
+      <option value="graduate">Graduate</option>
+    </select>
+
+    <label for="category">Your Category</label>
+    <select id="category">
+      <option value="general">General</option>
+      <option value="obc">OBC</option>
+      <option value="sc">SC</option>
+      <option value="st">ST</option>
+    </select>
+
+    <button onclick="checkEligibility()">Check My Eligibility</button>
+
+    <div class="results" id="results"></div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About EligCheck</h2>
+    <p>
+      EligCheck is an independent platform built to help Indian students and aspirants
+      understand which government exams they are eligible for based on age,
+      qualification and category.
+    </p>
+    <p>
+      This website is created for guidance purposes only. Always refer to official
+      notifications for final eligibility details.
+    </p>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <h4>Does category give age relaxation?</h4>
+    <p>Yes. OBC candidates usually get 3 years and SC/ST candidates get 5 years age relaxation.</p>
+
+    <h4>Is EligCheck an official government website?</h4>
+    <p>No. EligCheck is an independent, student-created platform.</p>
+
+    <h4>Are the results 100% accurate?</h4>
+    <p>The results are indicative. Always check official exam notifications.</p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <p><strong>Meet Khandelwal (Founder)</strong></p>
+    <p>📞 7742811551</p>
+    <p>✉️ meetkhandelwal12@gmail.com</p>
+
+    <form onsubmit="sendContact(event)">
+      <input type="text" id="cname" placeholder="Your Name" required>
+      <input type="email" id="cemail" placeholder="Your Email" required>
+      <textarea id="cmessage" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="contactResponse"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 EligCheck</p>
+  <p>Founder: Meet Khandelwal</p>
+  <p>Not affiliated with any government organization.</p>
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
